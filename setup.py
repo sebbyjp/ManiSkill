@@ -44,40 +44,4 @@ setup(
         "tyro>=0.8.5",  # nice, typed, command line arg parser
         "huggingface_hub",  # we use HF to version control some assets/datasets more easily
         "pytest",
-    ],
-    # Glob patterns do not automatically match dotfiles
-    package_data={
-        "mani_skill": ["assets/**", "envs/**/*", "utils/**/*"],
-        "warp_maniskill.warp": ["native/*", "native/nanovdb/*"],
-    },
-    extras_require={
-        "dev": [
-            "pytest",
-            "black",
-            "isort",
-            "pre-commit",
-            "build",
-            "twine",
-            "stable_baselines3",
-            "pytest",
-        ],
-        "docs": [
-            # Note that currently sphinx 7 does not work, so we must use v6.2.1. See https://github.com/kivy/kivy/issues/8230 which tracks this issue. Once fixed we can use a later version
-            "sphinx==6.2.1",
-            "sphinx-autobuild",
-            "pydata_sphinx_theme",
-            # For spelling
-            "sphinxcontrib.spelling",
-            # Type hints support
-            "sphinx-autodoc-typehints",
-            # Copy button for code snippets
-            "sphinx_copybutton",
-            # Markdown parser
-            "myst-parser",
-            "sphinx-subfigure",
-            "sphinxcontrib-video",
-            "sphinx-togglebutton",
-            "sphinx_design",
-        ],
-    },
 )
