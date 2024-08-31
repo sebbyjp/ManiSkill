@@ -3,6 +3,7 @@ requires = ["setuptools>=62.3.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
+name = "mani_skill"
 dependencies = [
     "pytest>=6.0.0",
 ]
