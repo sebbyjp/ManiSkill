@@ -12,7 +12,7 @@ import sapien.physx as physx
 import sapien.render
 import torch
 
-from mani_skill.utils.common import is_headless
+from mani_skill.utils.headless_util import is_headless
 from mani_skill.render import SAPIEN_RENDER_SYSTEM
 from mani_skill.utils import common
 from mani_skill.utils.structs.actor import Actor

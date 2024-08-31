@@ -388,7 +388,3 @@ def to_numpy(array: Union[Array, Sequence], dtype=None) -> np.ndarray:
 # -------------------------------------------------------------------------- #
 # Utilities for working with quaternions
 # -------------------------------------------------------------------------- #
-def is_headless():
-    """Check if the environment is running in headless mode."""
-    import os
-    return os.environ.get("DISPLAY") is None
