@@ -44,4 +44,5 @@ setup(
         "tyro>=0.8.5",  # nice, typed, command line arg parser
         "huggingface_hub",  # we use HF to version control some assets/datasets more easily
         "pytest",
+    ],
 )
