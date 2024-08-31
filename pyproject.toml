@@ -4,6 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "mani_skill"
+version = "3.0.0b7"
 dependencies = [
     "pytest>=6.0.0",
 ]
