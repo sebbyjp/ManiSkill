@@ -44,6 +44,7 @@ class CPUGymWrapper(gym.Wrapper):
         return common.unbatch(common.to_numpy(obs), common.to_numpy(info))
 
     def render(self):
-        ret = self.env.render()
-        if self.render_mode in ["rgb_array", "sensors"]:
-            return common.unbatch(common.to_numpy(ret))
+        if not is_headless():
+            ret = self.env.render()
+            if self.render_mode in ["rgb_array", "sensors"]:
+                return common.unbatch(common.to_numpy(ret))

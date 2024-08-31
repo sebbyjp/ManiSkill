@@ -12,7 +12,7 @@ import sapien.physx as physx
 import sapien.render
 import torch
 
-from mani_skill.render import SAPIEN_RENDER_SYSTEM
+from mani_skill.render import SAPIEN_RENDER_SYSTEM, is_headless
 from mani_skill.utils import common
 from mani_skill.utils.structs.actor import Actor
 from mani_skill.utils.structs.link import Link
@@ -75,7 +75,7 @@ class RenderCamera:
     # Functions from RenderCameraComponent
     # -------------------------------------------------------------------------- #
     def get_extrinsic_matrix(self):
-        if physx.is_gpu_enabled():
+        if physx.is_gpu_enabled() and not is_headless():
             if self._cached_extrinsic_matrix is not None:
                 return self._cached_extrinsic_matrix
             ros2opencv = torch.tensor(
