@@ -43,7 +43,7 @@ setup(
         "pytorch_kinematics_ms==0.7.3",  # pytorch kinematics package for ManiSkill forked from https://github.com/UM-ARM-Lab/pytorch_kinematics
         "tyro>=0.8.5",  # nice, typed, command line arg parser
         "huggingface_hub",  # we use HF to version control some assets/datasets more easily
-        "pytest>=6.0.0",
+        "pytest",
     ],
     # Glob patterns do not automatically match dotfiles
     package_data={
