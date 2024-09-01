@@ -3,7 +3,7 @@ import sapien.physx as physx
 
 from mani_skill.envs.sapien_env import BaseEnv
 from mani_skill.utils import common
-from mani_skill.render import is_headless
+from mani_skill.utils.headless_util import is_headless
 
 
 class CPUGymWrapper(gym.Wrapper):
